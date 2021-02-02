@@ -1,8 +1,8 @@
-# Spreadsheet-Read-Simple
+# spreadsheet-read-simple-perl
 
-`Spreadsheet::Read::Simple` - A simplified reader for spreadsheets
+Perl module `Spreadsheet::Read::Simple` for simple parsing of spreadsheets
 
-## SYNOPSIS
+## Synopsis
 
 ```perl
 # Include module
@@ -12,7 +12,7 @@ use Spreadsheet::Read::Simple;
 my $book = ReadDataSimple($file);
 ```
 
-## REQUIRES
+## Requires
 
 + [DataExtract::FixedWidth](https://metacpan.org/pod/DataExtract::FixedWidth)
 + [File::MimeInfo](https://metacpan.org/pod/File::MimeInfo)
@@ -23,7 +23,7 @@ my $book = ReadDataSimple($file);
 + [Text::CSV::Separator](https://metacpan.org/pod/Text::CSV::Separator)
 + [Text::Trim](https://metacpan.org/pod/Text::Trim)
 
-## DESCRIPTION
+## Description
 
 This module combines the capabilities of the modules `Spreadsheet::Read`
 and `DataExtract::FixedWidth` in order to parse both, conventional
@@ -33,13 +33,13 @@ The latter is being achieved by converting the text file with fixed
 width columns to a temporary CSV spreadsheet and parsing this file using
 the method `ReadData` provided by `Spreadsheet::Read`.
 
-## EXPORT
+## Export
 
 The following symbols are exported.
 
 + `&ReadDataSimple`
 
-## SUBROUTINES
+## Subroutines
 
 + **ReadDataSimple**( *source* [, _option_ => _value_ [, ... ]])`
 
@@ -65,11 +65,7 @@ The following symbols are exported.
     routine will try to detect it automatically be its MIME type.
     Known settings are: `csv`, `ods`, `xls`, `xlsx`.
 
-## AUTHOR
-
-matthias.boljen@emi.fraunhofer.de
-
-## COPYRIGHT AND LICENSE
+## Copyright and License
 
 MIT License
 
