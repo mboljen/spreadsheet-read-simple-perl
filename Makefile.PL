@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME          => 'Spreadsheet::Read::Simple',
-    AUTHOR        => q{Matthias Boljen <mboljen@online.de>},
+    AUTHOR        => q{Matthias Boljen},
     VERSION_FROM  => 'lib/Spreadsheet/Read/Simple.pm',
     ABSTRACT_FROM => 'lib/Spreadsheet/Read/Simple.pm',
     LICENSE       => 'perl',
