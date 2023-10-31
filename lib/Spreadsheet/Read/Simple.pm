@@ -1,7 +1,7 @@
 # Copyright 2018 Matthias Boljen.  All rights reserved.
 #
 # Created:         Mo 2019-08-26 11:55:21 CEST
-# Last Modified:   Di 2021-02-02 09:06:25 CET
+# Last Modified:   Di 2023-10-31 23:27:08 CET
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
@@ -25,6 +25,7 @@ use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 $VERSION = 0.01;
 
 use Carp;
+use Data::Dumper;
 use DataExtract::FixedWidth;
 use File::MimeInfo;
 use File::Temp;
@@ -138,7 +139,7 @@ sub ReadDataSimple
         {
             #
             my $mimetype = mimetype($src);
-            if ($mimetype =~ /^text\/(?:plain|csv)$/)
+            if ($mimetype =~ /^text\/(?:plain|csv|x-log)$/)
             {
                 # Plain text or CSV file
                 $params{parser} = 'csv';
@@ -169,7 +170,8 @@ sub ReadDataSimple
         }
 
         # Auto-detect separation character
-        if (not defined $params{sep} and $params{parser} eq 'csv')
+        if (not exists $params{sep} or (not defined $params{sep} and
+                                                    $params{parser} eq 'csv'))
         {
             my @chars = get_separator(path => $src, include => [' ']);
             $params{sep} = shift @chars if @chars;
