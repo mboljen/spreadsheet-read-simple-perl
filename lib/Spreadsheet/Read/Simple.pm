@@ -1,7 +1,7 @@
 # Copyright 2018 Matthias Boljen.  All rights reserved.
 #
 # Created:         Mo 2019-08-26 11:55:21 CEST
-# Last Modified:   Di 2023-10-31 23:27:08 CET
+# Last Modified:   Wed 2024-02-14 18:29:40 CET
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
@@ -174,9 +174,15 @@ sub ReadDataSimple
                                                     $params{parser} eq 'csv'))
         {
             my @chars = get_separator(path => $src, include => [' ']);
-            $params{sep} = shift @chars if @chars;
-            carp "Failed to auto-detect separator: $src"
-                unless defined $params{sep};
+            if (@chars)
+            {
+                $params{sep} = shift @chars;
+                carp "Auto-detected separator `$params{sep}` for $src";
+            }
+            else
+            {
+                carp "Failed to auto-detect separator for $src";
+            }
         }
     }
 
