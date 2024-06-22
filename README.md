@@ -2,6 +2,7 @@
 
 Perl module `Spreadsheet::Read::Simple` for simple parsing of spreadsheets
 
+
 ## Synopsis
 
 ```perl
@@ -12,16 +13,6 @@ use Spreadsheet::Read::Simple;
 my $book = ReadDataSimple($file);
 ```
 
-## Requires
-
-+ [DataExtract::FixedWidth](https://metacpan.org/pod/DataExtract::FixedWidth)
-+ [File::MimeInfo](https://metacpan.org/pod/File::MimeInfo)
-+ [File::Temp](https://metacpan.org/pod/File::Temp)
-+ [Scalar::Util](https://metacpan.org/pod/Scalar::Util)
-+ [Spreadsheet::Read](https://metacpan.org/pod/Spreadsheet::Read)
-+ [Spreadsheet::Write](https://metacpan.org/pod/Spreadsheet::Write)
-+ [Text::CSV::Separator](https://metacpan.org/pod/Text::CSV::Separator)
-+ [Text::Trim](https://metacpan.org/pod/Text::Trim)
 
 ## Description
 
@@ -65,26 +56,26 @@ The following symbols are exported.
     routine will try to detect it automatically be its MIME type.
     Known settings are: `csv`, `ods`, `xls`, `xlsx`.
 
-## Copyright and License
 
-MIT License
+## Requirements
 
-Copyright (c) 2018, 2021 Matthias Boljen
++ [DataExtract::FixedWidth](https://metacpan.org/pod/DataExtract::FixedWidth)
++ [File::MimeInfo](https://metacpan.org/pod/File::MimeInfo)
++ [File::Temp](https://metacpan.org/pod/File::Temp)
++ [Scalar::Util](https://metacpan.org/pod/Scalar::Util)
++ [Spreadsheet::Read](https://metacpan.org/pod/Spreadsheet::Read)
++ [Spreadsheet::Write](https://metacpan.org/pod/Spreadsheet::Write)
++ [Text::CSV::Separator](https://metacpan.org/pod/Text::CSV::Separator)
++ [Text::Trim](https://metacpan.org/pod/Text::Trim)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Contribution
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Pull requests are welcome.  For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
